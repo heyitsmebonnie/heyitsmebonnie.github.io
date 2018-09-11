@@ -1,0 +1,101 @@
+/* =================================
+  Base Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  line-height: 1.6;
+  /* color: #3a3a3a; */
+  margin: 0;
+  background-color: #F1CC06;
+  background-image: linear-gradient(#D89205 33%, #F0B706 66%, #F1CC06 99%);
+}
+
+a {
+	text-decoration: none;
+
+}
+
+/* =================================
+  Header Styles
+==================================== */
+
+.jumbotron {
+  display: none;
+  background-image: radial-gradient(white 61%, #F1CC06 80%, #F0B706 90%, #D89205 99%);
+  min-height: 1000px;
+  align-items: center;
+}
+
+#navbarNav {
+  justify-content: center;
+}
+
+#navbarNav ul {
+  align-items: center;
+}
+
+#downButton {
+  font-size: 2rem;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+/* =================================
+  Main Styles
+==================================== */
+
+
+
+
+
+
+
+
+
+/* =================================
+  Footer Styles
+==================================== */
+
+/* *Sticky Footer*/
+html, body {
+  height: 100%;
+
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
+  background-color: grey;
+}
+/* End Sticky Footer */
+
+a {
+  color: darkblue;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media(min-width: 1400px) {
+
+  .jumbotron {
+    display: flex;
+  }
+
+}
