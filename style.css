@@ -24,7 +24,7 @@ a {
   Header Styles
 ==================================== */
 
-.jumbotron {
+header .jumbotron {
   display: none;
   background-image: radial-gradient(white 61%, #F1CC06 80%, #F0B706 90%, #D89205 99%);
   min-height: 1000px;
@@ -54,7 +54,12 @@ a {
   Main Styles
 ==================================== */
 
-
+.section-headers {
+  background-color: brown;
+  color: white;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
 
 
 
@@ -94,8 +99,11 @@ a {
 
 @media(min-width: 1400px) {
 
-  .jumbotron {
+  header .jumbotron {
     display: flex;
+  }
+  header nav {
+    display: none;
   }
 
 }
