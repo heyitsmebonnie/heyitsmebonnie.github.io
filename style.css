@@ -47,6 +47,10 @@ header .jumbotron {
   margin: 0 auto;
 }
 
+#downButton:hover {
+  color: white;
+}
+
 
 
 
@@ -78,9 +82,9 @@ header .jumbotron {
   margin-bottom: 3rem;
 }
 
-#intro-row {
+/* #intro-row {
   align-items: center;
-}
+} */
 
 #candles .card,
 #soaps .card,
@@ -95,6 +99,35 @@ header .jumbotron {
   margin-top: 3rem;
 }
 
+.contact-form {
+  border: 1px solid darkgrey;
+  padding: 15px;
+  box-shadow: -5px 5px 8px darkgrey;
+  border-radius: 5px;
+  background-color: #ebebeb;
+  margin-top: 3rem;
+}
+
+.contact-form button {
+  background-color: #e4a306;
+}
+
+.intro-p {
+  background-color: white;
+  padding: 1rem 1rem 1rem 3rem;
+  border: black 1px solid;
+  box-shadow: 2px 2px black;
+  text-indent: -2rem;
+
+}
+
+.intro-p::first-letter {
+  font-style: bold;
+  font-size: 2.5rem;
+  color: #e4a306;
+  text-shadow: 1px 1px black;
+  padding-right: .2rem;
+}
 
 /* =================================
   Footer Styles
