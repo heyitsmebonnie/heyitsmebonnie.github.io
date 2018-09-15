@@ -1,0 +1,3 @@
+-fix linking to aboutme from other pages causes header to cut off.
+-carousel images on product page.
+-product page js.

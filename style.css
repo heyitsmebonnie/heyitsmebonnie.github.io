@@ -15,10 +15,6 @@ body {
   letter-spacing: .1rem;
 }
 
-a {
-	text-decoration: none;
-
-}
 
 /* =================================
   Header Styles
@@ -39,6 +35,7 @@ header .jumbotron {
 
 #navbarNav ul {
   align-items: center;
+  font-weight: bold;
 }
 
 #downButton {
@@ -65,7 +62,7 @@ header .jumbotron {
   background-image: linear-gradient(to bottom right, #E4C705, #E49B06);
   border-top: 2px solid white;
   border-bottom: 2px solid white;
-  margin-top: 7rem;
+  margin-top: 0;
   margin-bottom: 5rem;
 
 }
@@ -82,22 +79,6 @@ header .jumbotron {
   margin-bottom: 3rem;
 }
 
-/* #intro-row {
-  align-items: center;
-} */
-
-#candles .card,
-#soaps .card,
-#bathBombs .card {
-  height: 100%;
-}
-
-#candles .col-lg-4,
-#soaps .col-lg-4,
-#bathBombs .col-lg-4 {
-  box-shadow: 4px 4px;
-  margin-top: 3rem;
-}
 
 .contact-form {
   border: 1px solid darkgrey;
@@ -129,11 +110,76 @@ header .jumbotron {
   padding-right: .2rem;
 }
 
+#featured .card {
+  height: 100%;
+  box-shadow: 4px 4px;
+}
+
+#featured h5 a {
+  color: inherit;
+}
+
+.product-page-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-page-link:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.product-preview {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 1.5rem 0;
+  margin: 2rem auto;
+  align-items: center;
+}
+
+.product-preview:hover,
+.feature-card:hover {
+  cursor: pointer;
+}
+
+.preview-column {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 3rem;
+  justify-content: space-around;
+}
+
+.addToCartButton {
+  align-self: flex-end
+}
+
+.img-preview {
+  max-width: 100%;
+}
+
+.preview-price {
+  font-weight: bold;
+}
+
+.img-product-page {
+  max-width: 100%;
+}
 /* =================================
   Footer Styles
 ==================================== */
 
-a {
+footer a {
   color: pink;
 }
 
@@ -154,6 +200,17 @@ footer {
     border-bottom: 3px solid black;
     border-top: 3px solid black;
     height: 85px;
+  }
+
+  .product-preview {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .img-preview {
+    width: 403px;
+    height: 226px;
+    max-width: inherit;
   }
 }
 
