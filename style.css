@@ -175,6 +175,28 @@ header .jumbotron {
 .img-product-page {
   max-width: 100%;
 }
+
+
+.product-focus {
+  box-shadow: 5px 5px 2px;
+  width: 95%%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 1.5rem 0;
+  margin: 2rem auto;
+  align-items: center;
+}
+
+.focus-column {
+  min-width: 40%;
+}
+
+.img-modal {
+  max-width: 1200px;
+}
 /* =================================
   Footer Styles
 ==================================== */
@@ -189,6 +211,23 @@ footer {
   border-top: 3px solid white;
 }
 
+/*Sticky Footer*/
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+  background-color: lightgrey;
+}
+/* End Sticky Footer */
+
 /* =================================
   Media Queries
 ==================================== */
@@ -199,12 +238,13 @@ footer {
     background-image: linear-gradient(to right, white 35% , #F1CC06);
     border-bottom: 3px solid black;
     border-top: 3px solid black;
-    height: 85px;
+    height: 87px;
   }
 
   .product-preview {
     flex-direction: row;
     width: 100%;
+    min-width: 800px;
   }
 
   .img-preview {
@@ -212,8 +252,14 @@ footer {
     height: 226px;
     max-width: inherit;
   }
-}
 
+  .product-focus {
+    flex-direction: row;
+    width: 100%;
+    min-width: 900px;
+  }
+
+}
 @media(min-width: 1400px) {
 
   header .jumbotron {
@@ -222,6 +268,10 @@ footer {
 
   body {
   background-image: linear-gradient(to right, #F2F1F1 1%, #8A8685 15%, #8A8685 85%, #F2F1F1 99%);
+  }
+
+  .max-width-1200 {
+    min-width: 1200px;
   }
 
 }

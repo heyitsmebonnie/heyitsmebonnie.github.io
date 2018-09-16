@@ -1,3 +1,5 @@
--fix linking to aboutme from other pages causes header to cut off.
+-fix linking to aboutme from other pages causes header to cut off.-DONE
 -carousel images on product page.
--product page js.
+-product page js.-DONE
+-put price of soaps/candles and bombs into an easily accessible object to
+make the codebase more modular.
