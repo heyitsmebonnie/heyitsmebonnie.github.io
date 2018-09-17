@@ -57,14 +57,20 @@ const productPagePrice = document.querySelector('#productPagePrice');
 const productPageP = document.querySelector('#productPageP');
 const productPageImg = document.querySelector('#productPageImg');
 const nav = document.querySelector('nav');
-// let product = {
-//   name : 'product name',
-//   price : 'product price',
-//   description : 'product description',
-//   imageSource : 'product image source',
-//   imageAlt : 'product image alt'
-//
-// }
+// const imgList = document.querySelectorAll('.img-list');
+
+
+//takes the origin page product div list of images and inputs them into an array of objects to be passed to the product-pages html page.
+function getProductSourceList(imgList) {
+  sourceAltList = [];
+  for (let i = 0; i < imgList.length; i +=1) {
+    if(imgList[i].tagName === "IMG") {
+      sourceAltList[i] = {'source' : imgList[i].getAttribute('src'),
+                        'alt' : imgList[i].getAttribute('alt')};
+    }
+  }
+  return sourceAltList;
+}
 
 //adds clicked product preview info to product page object.
 function buildProductObject(productPageLink) {
@@ -76,13 +82,12 @@ function buildProductObject(productPageLink) {
   if(productPageLink.lastElementChild.children.length === 3) {
     const productPrice = productName.nextElementSibling;
     const productDescription = productPrice.nextElementSibling;
-    const productImage = productPageLink.firstElementChild.firstElementChild;
+    const productImageList = getProductSourceList(productPageLink.firstElementChild.children);
     let product = {
       name : productName.textContent,
       price : productPrice.innerHTML,
       description : productDescription.textContent,
-      imageSource : productImage.getAttribute('src'),
-      imageAlt : productImage.getAttribute('alt')
+      imageList : productImageList
     }
       return product
     //feature
@@ -96,28 +101,19 @@ function buildProductObject(productPageLink) {
     } else if(productPageLink.previousElementSibling.textContent === "Bath Bombs") {
       productPrice.innerHTML = "Price: $4.00/bomb";
     }
-    console.log(productName);
-    console.log(productName.nextElementSibling);
+
     const productDescription = productName.nextElementSibling;
-    const productImage = productPageLink.firstElementChild;
+    const productImageList = getProductSourceList(productPageLink.children);
     let product = {
       name : productName.textContent,
       price : productPrice.innerHTML,
       description : productDescription.textContent,
-      imageSource : productImage.getAttribute('src'),
-      imageAlt : productImage.getAttribute('alt')
+      imageList : productImageList
     }
       return product
-
   }
 
-
-
-
 }
-
-
-
 
 // highlight product previews to indicate they can be cliked. go to product page on click.
 for(let i = 0; i < productPageLinks.length; i +=1) {
@@ -144,7 +140,6 @@ window.onload = function removeNavSticky() {
 
 // navigating to home from sub pages puts the sticky navbar in the way. Fix the problem by only shoiwng the navbar after the window is scrolled.
 window.addEventListener('scroll', () => {
-  console.log('scroll');
   if (window.matchMedia("(min-width: 992px)").matches) {
     nav.className = "sticky-top navbar-light navbar-expand-lg"
   }

@@ -10,8 +10,8 @@ body {
   font-family: "Verdana", sans-serif;
   line-height: 1.6;
   margin: 0;
-  /* background-color: black; */
-  background-image: linear-gradient(to right, #F2F1F1 1%, #8A8685 5%, #8A8685 95%, #F2F1F1 99%);
+  background-color: #fdfd96;
+
   letter-spacing: .1rem;
 }
 
@@ -52,29 +52,28 @@ header .jumbotron {
 
 
 
-
-
 /* =================================
   Main Styles
 ==================================== */
 
 .section-headers {
-  background-image: linear-gradient(to bottom right, #E4C705, #E49B06);
+  background-color: #aec6cf;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   margin-top: 0;
-  margin-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
 }
 
 .section-headers h2 {
-  color: #795548;
+  color: white;
   font-weight: 550;
-  text-shadow: 2px 1px white;
+  text-shadow: 2px 1px black;
 }
 
 .carousel {
-  box-shadow: 10px 10px black;
+  box-shadow: 5px 5px 4px black;
   border: 5px solid white;
   margin-bottom: 3rem;
 }
@@ -146,6 +145,7 @@ header .jumbotron {
   border-radius: 1.5rem 0;
   margin: 2rem auto;
   align-items: center;
+  box-shadow: 5px 5px 2px;
 }
 
 .product-preview:hover,
@@ -194,20 +194,30 @@ header .jumbotron {
   min-width: 40%;
 }
 
-.img-modal {
-  max-width: 1200px;
+.sub-heading {
+  text-shadow: 2px 2px white;
 }
+
+.contact-details-box {
+  border: 1px solid darkgrey;
+  padding: 15px;
+  box-shadow: -5px 5px 8px darkgrey;
+  border-radius: 5px;
+  background-color: #ebebeb;
+  margin-top: 3rem;
+}
+
 /* =================================
   Footer Styles
 ==================================== */
 
 footer a {
-  color: pink;
+  color: purple;
 }
 
 footer {
   color: white;
-  background-color: black;
+  background-color: #aec6cf;
   border-top: 3px solid white;
 }
 
@@ -264,10 +274,6 @@ body {
 
   header .jumbotron {
     display: flex;
-  }
-
-  body {
-  background-image: linear-gradient(to right, #F2F1F1 1%, #8A8685 15%, #8A8685 85%, #F2F1F1 99%);
   }
 
   .max-width-1200 {
