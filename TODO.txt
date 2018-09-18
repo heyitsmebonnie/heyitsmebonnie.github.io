@@ -1,5 +1,9 @@
 -fix linking to aboutme from other pages causes header to cut off.-DONE
--carousel images on product page.- DONE
+-carousel images on product page.
 -product page js.-DONE
 -put price of soaps/candles and bombs into an easily accessible object to
-make the codebase more modular.
+	make the codebase more modular.
+-show a slimmed down jumbotron on mobile screens.- DONE
+-on mouseover product. display text over greyed image 
+	indicating: go to product page.
+-investigate error message on switching between html pages.

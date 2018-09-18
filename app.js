@@ -57,8 +57,8 @@ const productPagePrice = document.querySelector('#productPagePrice');
 const productPageP = document.querySelector('#productPageP');
 const productPageImg = document.querySelector('#productPageImg');
 const nav = document.querySelector('nav');
-// const imgList = document.querySelectorAll('.img-list');
-
+const navbarTogglerIcon = document.querySelector('.navbar-toggler');
+const mobileHeader = document.querySelector('.mobile-header');
 
 //takes the origin page product div list of images and inputs them into an array of objects to be passed to the product-pages html page.
 function getProductSourceList(imgList) {
@@ -142,5 +142,14 @@ window.onload = function removeNavSticky() {
 window.addEventListener('scroll', () => {
   if (window.matchMedia("(min-width: 992px)").matches) {
     nav.className = "sticky-top navbar-light navbar-expand-lg"
+  }
+});
+
+// hide the mobile-header when opening up the navbar with the button.
+navbarTogglerIcon.addEventListener('click', () => {
+  if(mobileHeader.style.display === "") {
+    mobileHeader.style.display = "none";
+  } else {
+    mobileHeader.style.display = "";
   }
 });

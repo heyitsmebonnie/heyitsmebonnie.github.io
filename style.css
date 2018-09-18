@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
   margin: 0;
   background-color: #fdfd96;
-
+  font-size: .8rem;
   letter-spacing: .1rem;
 }
 
@@ -48,7 +48,9 @@ header .jumbotron {
   color: white;
 }
 
-
+.mobile-header {
+  max-width: 100%;
+}
 
 
 
@@ -60,7 +62,7 @@ header .jumbotron {
   background-color: #aec6cf;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
-  margin-top: 0;
+  margin-top: 4rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
 
@@ -196,15 +198,18 @@ header .jumbotron {
 
 .sub-heading {
   text-shadow: 2px 2px white;
+  margin-top: 2rem;
 }
 
 .contact-details-box {
   border: 1px solid darkgrey;
-  padding: 15px;
+  padding: 1rem;
   box-shadow: -5px 5px 8px darkgrey;
   border-radius: 5px;
-  background-color: #ebebeb;
+  background-color: white;
   margin-top: 3rem;
+  max-width: 95%;
+  min-width: 290px;
 }
 
 /* =================================
@@ -267,6 +272,10 @@ body {
     flex-direction: row;
     width: 100%;
     min-width: 900px;
+  }
+
+  .mobile-header {
+    display: none;
   }
 
 }
