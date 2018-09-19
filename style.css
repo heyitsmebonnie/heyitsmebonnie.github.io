@@ -212,6 +212,15 @@ header .jumbotron {
   min-width: 290px;
 }
 
+/* center img text on mouseover */
+.center {
+    position: absolute;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+}
+
 /* =================================
   Footer Styles
 ==================================== */
