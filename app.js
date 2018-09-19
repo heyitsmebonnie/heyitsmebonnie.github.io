@@ -120,16 +120,16 @@ for(let i = 0; i < productPageLinks.length; i +=1) {
   productPageLinks[i].addEventListener('mouseover', () => {
     productPageLinks[i].style.backgroundColor = "gold";
     productPageLinks[i].firstElementChild.firstElementChild.style ="opacity: 0.3";
-    // const text = document.createElement('div');
-    // text.textContent = "Click To View Product Page";
-    // text.className = "center";
-    // productPageLinks[i].firstElementChild.appendChild(text);
+    const text = document.createElement('div');
+    text.textContent = "Click To View Product Page";
+    text.className = "center";
+    productPageLinks[i].firstElementChild.appendChild(text);
   });
 
   productPageLinks[i].addEventListener('mouseout', () => {
     productPageLinks[i].style.backgroundColor = "white";
     productPageLinks[i].firstElementChild.firstElementChild.style ="opacity: inherit";
-    // productPageLinks[i].firstElementChild.removeChild(productPageLinks[i].firstElementChild.lastElementChild);
+    productPageLinks[i].firstElementChild.removeChild(productPageLinks[i].firstElementChild.lastElementChild);
   });
 
 // pass the clicked product preview as a string in URL to productpage.html
