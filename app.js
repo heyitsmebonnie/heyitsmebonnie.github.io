@@ -147,8 +147,9 @@ for(let i = 0; i < productPageLinks.length; i +=1) {
   });
 
 // pass the clicked product preview as a string in URL to productpage.html
-  productPageLink.addEventListener('click', () => {
-    console.log(buildProductObject(productPageLinks[i]));
+  productPageLinks[i].addEventListener('click', () => {
+    productPageLink.removeChild(productPageLink.lastElementChild);
+
     window.location.href = 'product-page.html' + '#' + JSON.stringify(buildProductObject(productPageLinks[i]));
   });
 }
