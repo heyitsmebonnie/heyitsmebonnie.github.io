@@ -117,30 +117,43 @@ function buildProductObject(productPageLink) {
 
 // highlight product previews to indicate they can be cliked. go to product page on click.
 for(let i = 0; i < productPageLinks.length; i +=1) {
-  productPageLinks[i].addEventListener('mouseover', () => {
-    productPageLinks[i].style.backgroundColor = "gold";
-    productPageLinks[i].firstElementChild.firstElementChild.style ="opacity: 0.3";
-    const text = document.createElement('div');
-    text.textContent = "Click To View Product Page";
+  const text = document.createElement('div');
+  text.textContent = "Click To View Product Page";
+  text.style.display = "none";
+  //check if we are dealing with a feature card or a product-preview element by comparing the last element childs children length and acting accordingly.
+
+  //non-feature
+  let productPageLink = "";
+  if(productPageLinks[i].lastElementChild.children.length === 3) {
+    productPageLink = productPageLinks[i].firstElementChild;
     text.className = "center";
-    productPageLinks[i].firstElementChild.appendChild(text);
+    // feature
+  } else {
+    productPageLink = productPageLinks[i];
+    text.className = "center-feature";
+  }
+  productPageLink.appendChild(text);
+  productPageLinks[i].addEventListener('mouseover', () => {
+    productPageLink.style.backgroundColor = "gold";
+    productPageLink.firstElementChild.style ="opacity: 0.3";
+    text.style.display = "";
+
   });
 
   productPageLinks[i].addEventListener('mouseout', () => {
-    productPageLinks[i].style.backgroundColor = "white";
-    productPageLinks[i].firstElementChild.firstElementChild.style ="opacity: inherit";
-    productPageLinks[i].firstElementChild.removeChild(productPageLinks[i].firstElementChild.lastElementChild);
+    productPageLink.style.backgroundColor = "white";
+    productPageLink.firstElementChild.style ="opacity: inherit";
+    text.style.display = "none";
   });
 
 // pass the clicked product preview as a string in URL to productpage.html
-  productPageLinks[i].addEventListener('click', () => {
+  productPageLink.addEventListener('click', () => {
     console.log(buildProductObject(productPageLinks[i]));
     window.location.href = 'product-page.html' + '#' + JSON.stringify(buildProductObject(productPageLinks[i]));
   });
 }
 
-//
-
+//hides the navbar when navigating to features or contact us so as to preven the nav from covering the section header.
 window.onload = function removeNavSticky() {
   nav.className = "navbar-light navbar-expand-lg"
 }
